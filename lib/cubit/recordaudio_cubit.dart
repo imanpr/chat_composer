@@ -67,11 +67,11 @@ class RecordAudioCubit extends Cubit<RecordaudioState> {
       String path = dir.path +
           '/' +
           DateTime.now().millisecondsSinceEpoch.toString() +
-          '.aac';
+          '.mp3';
 
       await _myRecorder.startRecorder(
         toFile: path,
-        codec: Codec.aacADTS,
+        codec: Codec.mp3,
       );
 
       emit(RecordAudioStarted());
